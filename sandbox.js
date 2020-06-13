@@ -8,7 +8,7 @@ generateNewLi =(todo) => {
     const newLi = `
     <li>
         <span>${todo}</span>
-        <i>delete</i>
+        <i class="far fa-trash-alt"></i>
     </li>
     `;
     list.innerHTML += newLi;
