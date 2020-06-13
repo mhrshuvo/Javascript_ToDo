@@ -27,10 +27,6 @@ addNewToDo.addEventListener('submit', e => {
     
 });
 
-
-
-
-
 // search things in to do
 searchItem.addEventListener('submit' , e => {
     e.preventDefault

@@ -7,17 +7,39 @@
 h1, h3 {
   background: cadetblue;
   color: cyan;
+  margin: 0 auto;
 }
 
-form .searchArea {
-  padding: 10px;
+form {
+  display: flex;
 }
 
-form ul {
-  display: inline;
+form input[type="text"] {
+  height: 40px;
+  width: 250px;
+  border-radius: 9999px;
+  border: 1px solid #707070;
+  outline: none;
+  padding-left: 15px;
+  font-size: 16px;
+  margin: 0 auto;
 }
 
-form li {
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.todos li {
+  padding: 5px;
   list-style: none;
+  margin: 0 auto;
+  float: left;
+}
+
+.todos i {
+  padding: 10px;
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
