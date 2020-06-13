@@ -18,8 +18,12 @@ generateNewLi =(todo) => {
 addNewToDo.addEventListener('submit', e => {
     e.preventDefault();
     const todo = addNewToDo.addNew.value.trim();
-    console.log(todo);
-    generateNewLi(todo)
+    
+    if(todo.length){
+        console.log(todo);
+        generateNewLi(todo);
+        addNewToDo.reset();
+    }
     
 });
 
