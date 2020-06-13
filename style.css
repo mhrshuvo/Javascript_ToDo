@@ -1,0 +1,23 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+h1, h3 {
+  background: cadetblue;
+  color: cyan;
+}
+
+form .searchArea {
+  padding: 10px;
+}
+
+form ul {
+  display: inline;
+}
+
+form li {
+  list-style: none;
+}
+/*# sourceMappingURL=style.css.map */
