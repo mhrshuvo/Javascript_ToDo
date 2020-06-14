@@ -1,6 +1,6 @@
 const addNewToDo = document.querySelector('.addNew');
 const list       = document.querySelector('.todos')
-const searchItem = document.querySelector('.searchBox');
+const search     = document.querySelector('.search input');
 
 
 // Add new things in to do list
@@ -8,7 +8,7 @@ generateNewLi =(todo) => {
     const newLi = `
     <li>
         <span>${todo}</span>
-        <i class="far fa-trash-alt"></i>
+        <i class="far fa-trash-alt delete"></i>
     </li>
     `;
     list.innerHTML += newLi;
@@ -27,9 +27,29 @@ addNewToDo.addEventListener('submit', e => {
     
 });
 
-// search things in to do
-searchItem.addEventListener('submit' , e => {
-    e.preventDefault
-    const search = searchItem.searchBox.value;
-    console.log(search);
+// Delete button
+
+list.addEventListener('click', e => {
+
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
+    }
+
+});
+
+
+
+// search things in to do with key up event
+const match = (letter) => {
+    Array.from(list.children)
+        .filter(list => !list.textContent.includes(letter))
+        .forEach(list => list.classList.add('notfound'));
+    Array.from(list.children)
+        .filter(list => list.textContent.includes(letter))
+        .forEach(list => list.classList.remove('notfound'));
+};
+
+search.addEventListener('keyup',() =>{
+    const letter = search.value.trim();
+    match(letter);
 });

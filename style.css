@@ -4,10 +4,17 @@
   box-sizing: border-box;
 }
 
-h1, h3 {
+.heading {
+  display: flex;
+  flex-direction: column;
+  background: cadetblue;
+  padding: 10px;
+}
+
+.heading h1, .heading h3 {
   background: cadetblue;
   color: cyan;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 form {
@@ -20,26 +27,35 @@ form input[type="text"] {
   border-radius: 9999px;
   border: 1px solid #707070;
   outline: none;
-  padding-left: 15px;
+  padding: 15px;
   font-size: 16px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .todos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .todos li {
   padding: 5px;
   list-style: none;
   margin: 0 auto;
-  float: left;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.todos i {
+.todos li span {
+  padding: 0 50px;
+}
+
+.todos li i {
   padding: 10px;
-  float: right;
+}
+
+.notfound {
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */
